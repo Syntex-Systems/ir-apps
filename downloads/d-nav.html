@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Download Nav Web Browser</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a professional look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light grey background */
+            color: #333;
+        }
+        /* For Persian text, ensure proper right-to-left alignment */
+        body.rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        body.rtl .md\:items-start {
+            align-items: flex-end; /* Align left section to right in RTL */
+        }
+        body.rtl .md\:text-left {
+            text-align: right; /* Align text to right in RTL */
+        }
+        body.rtl .md\:space-x-12 {
+            /* Reverse order for horizontal elements in RTL if necessary */
+            flex-direction: row-reverse;
+        }
+        body.rtl .md\:ml-3 { /* Adjust icon margin for RTL on larger screens */
+            margin-left: 0;
+            margin-right: 0.75rem; /* Equivalent to ml-3 */
+        }
+        body.rtl .ml-2 { /* Adjust icon margin for RTL on smaller screens */
+            margin-left: 0;
+            margin-right: 0.5rem; /* Equivalent to ml-2 */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl max-w-4xl w-full flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-10 lg:space-x-16">
+        <!-- Left Section: Logo and Description -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-3 md:space-y-5 flex-1">
+            <!-- App Logo -->
+            <img src="https://i.ibb.co/1Y4HRrFg/logo.png" alt="Nav Web Browser Logo" class="w-24 h-24 md:w-36 md:h-36 object-contain mb-2 rounded-2xl shadow-md">
+
+            <!-- Title -->
+            <h1 id="browserTitle" class="text-2xl md:text-4xl font-extrabold text-blue-800 leading-tight">
+                Nav Web Browser
+            </h1>
+
+            <!-- Description -->
+            <p id="browserDescription" class="text-sm md:text-lg text-gray-700 mt-2">
+                Experience a fast, secure, and intuitive way to browse the internet. Nav is an <strong>emergency</strong>, <strong>fast</strong>, and <strong>secure</strong> web browser developed under the <strong>Syntex Corporation</strong> and <strong>government-free</strong>. Nav Web Browser is designed for a seamless online journey.
+            </p>
+        </div>
+
+        <!-- Right Section: Download Options -->
+        <div class="flex flex-col items-center md:items-start space-y-4 md:space-y-5 flex-1">
+            <h2 id="downloadTitle" class="text-lg md:text-2xl font-bold text-gray-800">
+                Download Now
+            </h2>
+
+            <!-- Windows Download Button -->
+            <a href="https://github.com/Syntex-Systems/ir-apps/releases/download/web-browser/NavBrowser-win32-x64.zip" id="windowsDownloadButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 md:py-3.5 md:px-7 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 w-full text-center text-base md:text-lg">
+                Download for Windows
+                <!-- Simple download icon SVG -->
+                <svg class="inline-block ml-2 md:ml-3 w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            </a>
+
+            <!-- Android Coming Soon Section -->
+            <div class="bg-yellow-50 border border-yellow-200 text-yellow-800 p-2.5 md:p-3 rounded-lg w-full flex items-center space-x-2 shadow-sm">
+                <!-- Mobile phone icon SVG -->
+                <svg class="w-5 h-5 md:w-7 md:h-7 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                <p id="androidComingSoon" class="text-sm md:text-base">
+                    Android version coming soon! Currently in development.
+                </p>
+            </div>
+
+            <!-- Placeholder for future download links if any -->
+            <p id="morePlatformsInfo" class="text-gray-500 text-xs md:text-sm mt-2">
+                Check back soon for more platform availability.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const translations = {
+                en: {
+                    pageTitle: 'Download Nav Web Browser',
+                    browserTitle: 'Nav Web Browser',
+                    browserDescription: 'Experience a fast, secure, and intuitive way to browse the internet. Nav is an <strong>emergency</strong>, <strong>fast</strong>, and <strong>secure</strong> web browser developed under the <strong>Syntex Corporation</strong> and <strong>government-free</strong>. Nav Web Browser is designed for a seamless online journey.',
+                    downloadTitle: 'Download Now',
+                    windowsDownloadButton: 'Download for Windows',
+                    androidComingSoon: 'Android version coming soon! Currently in development.',
+                    morePlatformsInfo: 'Check back soon for more platform availability.'
+                },
+                fa: {
+                    pageTitle: 'دانلود مرورگر وب Nav',
+                    browserTitle: 'مرورگر وب Nav',
+                    browserDescription: 'تجربه‌ای سریع، امن و بصری را برای وب‌گردی تجربه کنید. Nav یک مرورگر وب <strong>اضطراری</strong>، <strong>سریع</strong> و <strong>امن</strong> است که تحت شرکت <strong>Syntex Corporation</strong> توسعه یافته و <strong>عاری از نظارت دولتی</strong> است. مرورگر وب Nav برای یک سفر آنلاین بی‌نقص طراحی شده است.',
+                    downloadTitle: 'هم اکنون دانلود کنید',
+                    windowsDownloadButton: 'دانلود برای ویندوز',
+                    androidComingSoon: 'نسخه اندروید به زودی! در حال حاضر در دست توسعه است.',
+                    morePlatformsInfo: 'به زودی برای دسترسی به پلتفرم‌های بیشتر دوباره سر بزنید.'
+                }
+            };
+
+            // Detect user's preferred language
+            const userLang = navigator.language || navigator.userLanguage; // Fallback for older browsers
+            const langKey = userLang.startsWith('fa') ? 'fa' : 'en';
+
+            // Apply RTL direction for Persian
+            if (langKey === 'fa') {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+
+            // Update text content based on detected language
+            document.getElementById('pageTitle').textContent = translations[langKey].pageTitle;
+            document.getElementById('browserTitle').textContent = translations[langKey].browserTitle;
+            document.getElementById('browserDescription').innerHTML = translations[langKey].browserDescription; // Use innerHTML to preserve strong tags
+            document.getElementById('downloadTitle').textContent = translations[langKey].downloadTitle;
+            document.getElementById('windowsDownloadButton').childNodes[0].nodeValue = translations[langKey].windowsDownloadButton; // Update text node before SVG
+            document.getElementById('androidComingSoon').textContent = translations[langKey].androidComingSoon;
+            document.getElementById('morePlatformsInfo').textContent = translations[langKey].morePlatformsInfo;
+        });
+    </script>
+</body>
+</html>
